@@ -1,0 +1,468 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    max-width: 1920px;
+    margin: 0 auto;
+    background: #FFFFFF;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 60px 30px 60px;
+
+    .right-header-container {
+        display: flex;
+        flex-direction: column;
+
+
+
+        .right-header-container_top {
+            display: flex;
+            flex-direction: row;
+
+            p {
+                color: #B3B3BA;
+                font-weight: 700;
+                font-size: 12px;
+                padding: 0 5px;
+                margin: 0;
+            }
+
+            a {
+                color: #B3B3BA;
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 16px;
+                padding: 0;
+                cursor: pointer;
+            }
+
+            .circle {
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #B3B3BA;
+                margin: 7px;
+            }
+
+            .lang-btn {
+                font-weight: 700;
+                font-size: 12px;
+                color: #B3B3BA;
+                border: none;
+                border-radius: 8px;
+                padding: 5px 7px;
+                background: transparent;
+                cursor: pointer;
+            }
+
+            .lang-btn:hover {
+                background: rgba(255, 255, 255, 0.2);
+            }
+
+            .number {
+                font-weight: 700;
+                font-size: 16px;
+            }
+
+            svg:hover path {
+                fill: rgba(240, 20, 90, 1);
+                cursor: pointer;
+            }
+        }
+
+        .right-header-container_bottom {
+
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                gap: 15px;
+                list-style-type: none;
+                padding: 0;
+
+                a {
+                    text-decoration: none;
+                    font-weight: 700;
+                    font-size: 16px;
+                    color: #24A3FF;
+                    padding-bottom: 3px;
+
+                }
+
+                a:hover {
+                    border-bottom: 2px solid #24A3FF;
+                }
+
+                .contact-active {
+                    color: #F0145A;
+                    border-bottom: 2px solid #F0145A;
+                }
+            }
+        }
+
+    }
+}
+
+.contact-section {
+    margin: 60px 0;
+    padding: 0 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    .left-container {
+        margin-right: 60px;
+        min-width: 650px;
+
+        .left-map {
+            border-bottom: 4px solid #E6E6F0;
+            padding-bottom: 30px;
+            font-weight: 400;
+            font-size: 21px;
+            color: #323264;
+            
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .left-number {
+            display: flex;
+            flex-direction: column;
+            padding: 30px 0;
+            border-bottom: 4px solid #E6E6F0;
+
+            .number {
+                font-weight: 400;
+                font-size: 21px;
+                color: #46466E;
+                text-decoration: none;
+            }
+
+            .email {
+                font-weight: 400;
+                font-size: 21px;
+                color: #24A3FF;
+                text-decoration: none;
+                margin-top: 15px;
+            }
+        }
+
+        .left-facebook {
+            display: flex;
+            width: 153px;
+            align-items: center;
+            text-decoration: none;
+
+            svg {
+                margin-right: 5px;
+            }
+
+            p {
+                font-weight: 700;
+                font-size: 12px;
+                color: #24A3FF;
+                text-transform: uppercase;
+            }
+        }
+
+        .left-facebook:hover {
+            p {
+                color: #F0145A;
+            }
+
+            svg path {
+                fill: #F0145A;
+            }
+        }
+
+    }
+
+    .right-form {
+        display: flex;
+        flex-direction: column;
+        border-radius: 12px;
+        max-width: max-content;
+        height: min-content; 
+        background: #F5F5FA;
+        padding: 30px;
+
+        input {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            min-width: 590px;
+            font-size: 16px;
+            border: 1px transparent;
+            outline: none;
+        }
+
+        input:focus {
+            border: 1px solid #24A3FF
+        }
+
+        h1 {
+            margin-top: 0;
+            font-weight: 700;
+            font-size: 30px;
+            background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+        }
+
+        .first-inputs {
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+        
+            .name {
+                padding: 15px;
+                border-radius: 8px;
+                margin-bottom: 15px;
+            }
+
+            .message {
+                padding: 15px;
+                padding-bottom: 80px;
+                border-radius: 8px;
+                
+            }
+        }
+
+        .second-inputs {
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            p {
+                font-weight: 700;
+                font-size: 14px;
+                color: #B3B3BA;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+            }
+
+            .phone {
+                padding: 15px;
+                border-radius: 8px;
+                margin-bottom: 15px;
+            }
+
+            .email {
+                padding: 15px;
+                border-radius: 8px;
+            }
+        }
+
+        button {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: #FFFFFF;
+            background: #24A3FF;
+            padding: 18px 30px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0px 0px 20px 0px #24A3FF80;
+            cursor: pointer;
+        }
+
+                button:hover {
+                    background: #0085FF;
+                    transition: 0.5s;
+                }
+
+    }
+
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background: #F5F5FA;
+    border-top: 2px solid #E6E6F0;
+    padding: 30px 60px;
+
+    .left-footer-container {
+        .left-footer-top {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            a {
+                text-decoration: none;
+            }
+
+            .address {
+                font-weight: 400;
+                font-size: 16px;
+                color: #323264;
+            }
+
+            .onmap {
+                font-weight: 700;
+                font-size: 12px;
+                color: #24A3FF;
+            }
+        }
+
+        .left-footer-bottom {
+            display: flex;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+            }
+
+            svg path {
+                fill: #24A3FF;
+                cursor: pointer;
+            }
+
+            svg:hover path {
+                fill: #F0145A;
+            }
+
+            .number {
+                font-weight: 700;
+                font-size: 16px;
+                color: #46466E;
+            }
+
+            .email {
+                font-weight: 700;
+                font-size: 16px;
+                color: #24A3FF;
+            }
+        }
+
+        .circle {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #B3B3BA;
+            margin: 7px;
+        }
+    }
+
+    .right-footer-text {
+        p {
+            margin: 0;
+            font-weight: 400;
+            font-size: 16px;
+            color: #B3B3BA;
+        }
+    }
+}
+
+@media (max-width: 1920px) {
+    .contact-section {
+        padding: 0 180px;
+
+        .left-container {
+            min-width: 510px;
+        }
+
+        .right-form {
+            width: 510px;
+    
+            input {
+                min-width: 450px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .contact-section {
+        padding: 0 60px;
+    
+        .left-container {
+            min-width: 422px;
+        }
+    
+        .right-form {
+            width: 422px;
+    
+            input {
+                 min-width: 362px;
+            }
+        }
+    }
+}
+
+@media (max-width: 890px) {
+    header {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 0 60px;
+        align-items: center;
+    
+        .left-container {
+            min-width: 648px;
+            margin: 0;
+        }
+    
+        .right-form {
+            width: 648px;
+            margin-top: 60px;
+    
+            input {
+                min-width: 588px;
+            }
+        }
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 670px) {
+    .contact-section {
+        padding: 0 60px;
+    
+        .left-container {
+            min-width: 422px;
+        }
+    
+        .right-form {
+            width: 422px;
+    
+            input {
+                min-width: 362px;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    header {
+        flex-direction: row-reverse;
+        padding: 20px;
+        .right-header-container_bottom {
+            display: none;
+        }
+    }
+    .contact-section {
+            padding: 0 60px;
+            .left-container {
+                min-width: 315px;
+            }
+    
+            .right-form {
+                width: 315px;
+    
+                input {
+                    min-width: 255px;
+                }
+            }
+        }
+}
