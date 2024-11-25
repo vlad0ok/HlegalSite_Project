@@ -103,7 +103,7 @@ header .right-header-container .right-header-container_bottom ul a:hover {
 }
 .first-section .header-main-section {
   min-height: 800px;
-  background-image: url(/images/Symbol.png);
+  background-image: url(../images/Symbol.png);
   background-repeat: no-repeat;
   background-position: center;
 }
