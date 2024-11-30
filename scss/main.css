@@ -232,12 +232,50 @@ header .right-header-container .right-header-container_bottom ul a:hover {
   color: rgb(255, 255, 255);
 }
 
+.second-section .carousel {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+.second-section .slick-slide {
+  display: inline-block;
+  text-align: center;
+}
+.second-section .slick-list {
+  overflow: hidden;
+}
+.second-section .slick-track {
+  display: flex;
+}
+.second-section .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+.second-section .slick-dots #slick-slide-control00, .second-section .slick-dots #slick-slide-control01, .second-section .slick-dots #slick-slide-control02 {
+  width: 15px;
+  height: 15px;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 5px;
+}
+.second-section button {
+  font-size: 0;
+  cursor: pointer;
+  background-color: #24A3FF;
+}
 .second-section .team {
   display: flex;
   margin: 60px 60px 0 60px;
   background: #F5F5FA;
   border-radius: 12px;
   max-height: 344px;
+}
+.second-section .team .team-img {
+  border-radius: 12px 0 0 12px;
 }
 .second-section .team .team-text {
   display: flex;
@@ -584,11 +622,25 @@ footer .right-footer-text p {
   }
 }
 @media (max-width: 1440px) {
-  .second-section .team {
+  .second-section .team1 {
     background-image: url(../images/team1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .second-section .team2 {
+    background-image: url(../images/team2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .second-section .team3 {
+    background-image: url(../images/team3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .second-section .team {
     display: flex;
     margin: 60px 60px 0 60px;
     border-radius: 12px;
@@ -621,12 +673,12 @@ footer .right-footer-text p {
   .second-section .team .team-text .bottom-team-text h3 {
     font-weight: 700;
     font-size: 16px;
-    color: rgb(179, 179, 186);
+    color: rgb(255, 255, 255);
   }
   .second-section .team .team-text .bottom-team-text p {
     font-weight: 400;
     font-size: 14px;
-    color: rgb(179, 179, 186);
+    color: rgb(255, 255, 255);
   }
   .second-section .team img {
     display: none;
