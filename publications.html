@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="scss/publications.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        max-width: 1920px;
+        margin: 0 auto;
+      }
+
+      main {
+        padding: 60px 0;
+        margin: 0;
+        background-color: #f5f5fa;
+        flex-direction: column;
+      }
+
+      .navbar-brand img {
+        height: 50px;
+      }
+      .right-header-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      .right-header-container_top {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      .right-header-container_top a {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        color: #b3b3ba;
+      }
+      .right-header-container_bottom ul {
+        display: flex;
+        gap: 20px;
+        padding: 0;
+        list-style: none;
+        margin: 0;
+      }
+      .right-header-container_bottom a {
+        font-weight: 700;
+        padding-bottom: 3px;
+        font-size: 16px;
+        text-decoration: none;
+        color: #007bff;
+      }
+      .btn-outline-secondary:hover {
+        background: #b3b3ba;
+      }
+      .btn-primary {
+        background: #f0145a;
+      }
+      .btn {
+        font-weight: 700;
+        font-size: 12px;
+      }
+
+      .right-header-container_bottom .a-active {
+        color: #f0145a;
+        border-bottom: 2px solid #f0145a;
+      }
+
+      .right-header-container_bottom .a-active:hover {
+        border-bottom: 2px solid #f0145a;
+      }
+
+      .right-header-container_bottom a:hover {
+        border-bottom: 2px solid #007bff;
+      }
+
+      .right-header-container_top button {
+        border: none;
+      }
+      .circle {
+        width: 6px;
+        height: 6px;
+        background-color: #ccc;
+        border-radius: 50%;
+      }
+
+      .card-title {
+        color: #24a3ff;
+      }
+
+      .card h3 {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 1px;
+        color: #b3b3ba;
+        text-transform: uppercase;
+      }
+
+      .card h5 {
+        font-weight: 700;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .card h5:hover {
+        color: #f0145a;
+      }
+
+      .card p {
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      .btn-group button {
+        margin: 2px;
+        padding: 10px 30px;
+        border: none;
+        font-weight: 700;
+        font-size: 16px;
+      }
+
+      .second-btn {
+        background-color: #e6e6f0;
+        color: #323264;
+        border-radius: 10px;
+        border: none;
+        padding: 10px 30px;
+        font-weight: 700;
+        font-size: 16px;
+      }
+
+      .second-btn:hover {
+        background-color: #f5f5fa;
+      }
+
+      .bottom-btn {
+        box-shadow: 0 0 20px #24a3ff80;
+        background-color: #24a3ff;
+        border: none;
+        padding: 18px 30px;
+        font-weight: 700;
+      }
+
+      .bottom-btn:hover {
+        background-color: #0085ff;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-around;
+        background: #f5f5fa;
+        border-top: 2px solid #e6e6f0;
+        padding: 30px 0;
+      }
+
+      .left-footer-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 400px;
+      }
+
+      .left-footer-container .left-footer-top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .left-footer-container .left-footer-top a {
+        text-decoration: none;
+      }
+
+      .left-footer-container .left-footer-top .address {
+        font-weight: 400;
+        font-size: 16px;
+        color: #323264;
+      }
+
+      .left-footer-container .left-footer-top .onmap {
+        font-weight: 700;
+        font-size: 12px;
+        color: #24a3ff;
+      }
+
+      .left-footer-container .left-footer-bottom {
+        display: flex;
+        align-items: center;
+      }
+
+      .left-footer-container .left-footer-bottom a {
+        text-decoration: none;
+      }
+
+      .left-footer-container .left-footer-bottom svg path {
+        fill: #24a3ff;
+        cursor: pointer;
+      }
+
+      .left-footer-container .left-footer-bottom svg:hover path {
+        fill: #f0145a;
+      }
+
+      .left-footer-container .left-footer-bottom .number {
+        font-weight: 700;
+        font-size: 16px;
+        color: #46466e;
+      }
+
+      .left-footer-container .left-footer-bottom .email {
+        font-weight: 700;
+        font-size: 16px;
+        color: #24a3ff;
+      }
+
+      .left-footer-container .circle {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #b3b3ba;
+        margin: 7px;
+      }
+
+      .right-footer-text p {
+        margin: 0;
+        font-weight: 400;
+        font-size: 16px;
+        color: #b3b3ba;
+      }
+      @media (max-width: 578px) {
+        .right-header-container_top {
+          display: none;
+        }
+      }
+    </style>
+    <title>Publications</title>
+  </head>
+  <body>
+    <header class="navbar bg-body-tertiary">
+      <div
+        class="container d-flex align-items-center justify-content-between pt-5"
+      >
+        <a class="navbar-brand" href="#">
+          <img src="./images/logo_publications.svg" alt="Logo" />
+        </a>
+        <div class="d-flex justify-content-end">
+          <div class="right-header-container">
+            <div class="right-header-container_top">
+              <button class="btn btn-outline-secondary btn-sm p-1">УК</button>
+              <button class="btn btn-outline-secondary btn-sm p-1">РУ</button>
+              <button class="btn btn-primary btn-sm p-1">EN</button>
+              <div class="circle"></div>
+              <a href="https://g.co/kgs/YGPMgdt" class="text-muted"
+                >Kyiv, Mechnikova str, 14/1</a
+              >
+              <div class="circle"></div>
+              <a href="tel:0800211927" class="text-muted">0800 211 927</a>
+              <div class="circle"></div>
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_22721_6715)">
+                  <path
+                    d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z"
+                    fill="#B3B3BA"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_22721_6715">
+                    <rect
+                      width="24"
+                      height="24"
+                      fill="white"
+                      transform="translate(0 0.5)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <div class="right-header-container_bottom mt-3">
+              <ul>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">team</a></li>
+                <li><a class="a-active" href="#">publications</a></li>
+                <li><a href="contact.html">contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="d-flex justify-content-center align-items-center">
+      <div
+        class="btn-group mb-3"
+        role="group"
+        aria-label="Basic example"
+        style="background-color: #e6e6f0; border-radius: 10px"
+      >
+        <button
+          type="button"
+          class="btn btn-primary"
+          style="border-radius: 10px; background-color: #ffffff; color: #323264"
+        >
+          news
+        </button>
+        <button class="second-btn" type="button" class="btn btn-primary">
+          articles
+        </button>
+      </div>
+      <div class="d-flex justify-content-center flex-wrap gap-4 mt-3">
+        <div class="card p-0 border-0" style="width: 515px">
+          <img src="./images/news1.png" alt="News" />
+          <div class="card-body p-4">
+            <h5 class="card-title">Equity associate</h5>
+            <h3 class="pt-2 pb-2">APRIL 22</h3>
+            <p class="card-text border-top border-3 pt-2">
+              I'm a jun on projects. I am a co-owner of a law firm. How it
+              happened. Before entering my parents told me that if I…
+            </p>
+          </div>
+        </div>
+        <div class="card p-0 border-0" style="width: 515px">
+          <img src="./images/news2.png" alt="News" />
+          <div class="card-body p-4">
+            <h5 class="card-title">
+              Penalty for the Good Corporation: what will happen to Google and
+              others for violating the GDPR
+            </h5>
+            <h3 class="pt-2 pb-2">SEPTEMBER 29</h3>
+            <p class="card-text border-top border-3 pt-2">
+              And why the recovery of 50 million euros could be a fateful
+              precedent According to Mind.ua January 21 National Commission for
+              Data Protection.
+            </p>
+          </div>
+        </div>
+        <div class="card p-0 border-0" style="width: 515px">
+          <img src="./images/news3.png" alt="News" />
+          <div class="card-body p-4">
+            <h5 class="card-title">Millennial Testament</h5>
+            <h3 class="pt-2 pb-2">AUGUST 19</h3>
+            <p class="card-text border-top border-3 pt-2">
+              What and how modern vloggers, opinion leaders and
+              crypto-millionaires will inherit A typical legacy of the Ukrainian
+              generation X looks like this: an apartment in…
+            </p>
+          </div>
+        </div>
+        <div class="card p-0 border-0" style="width: 515px">
+          <img src="./images/news4.png" alt="News" />
+          <div class="card-body p-4">
+            <h5 class="card-title">
+              Language Law: How to Make Your Website Relevant
+            </h5>
+            <h3 class="pt-2 pb-2">August 19</h3>
+            <p class="card-text border-top border-3 pt-2">
+              Natalia Kyryk, head of content studio Wordfactory.ua First, it's
+              beautiful! This is the number one argument in favor of the
+              Ukrainian-language site. Secondly, it is effective. IN…
+            </p>
+          </div>
+        </div>
+        <div class="card p-0 border-0" style="width: 515px">
+          <img src="./images/news5.png" alt="News" />
+          <div class="card-body p-4">
+            <h5 class="card-title">
+              Reimbursement of the child's tuition fees in kindergarten and
+              school
+            </h5>
+            <h3 class="pt-2 pb-2">February 5, 2018</h3>
+            <p class="card-text border-top border-3 pt-2">
+              What we are talking about In June this year, the Verkhovna Rada
+              amended the Tax Code of Ukraine. From now on, parents who receive
+              an official…
+            </p>
+          </div>
+        </div>
+        <div class="card border-0" style="width: 515px; padding: 30px">
+          <div class="card-body p-0">
+            <h5 class="card-title">
+              Currency control is dead, long live currency control!
+            </h5>
+            <h3 class="pt-2 pb-2">June 14, 2018</h3>
+            <p class="card-text border-top border-3 pt-2">
+              Experts hold conferences, round tables and other events on
+              "liberalization of currency legislation."
+              Lawyers-experts-novelists rub their fingers about "ctrl + c / ctrl
+              + v".
+            </p>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="bottom-btn btn btn-primary btn-lg mt-4">
+        More publications
+      </button>
+    </main>
+    <footer>
+      <div
+        class="left-footer-container d-flex flex-column flex-md-row align-items-start gap-4"
+      >
+        <div class="left-footer-top d-flex align-items-center flex-wrap">
+          <a class="address" href="https://g.co/kgs/YGPMgdt" target="_blank"
+            >Kyiv, Mechnikova str, 14/1</a
+          >
+          <div class="circle"></div>
+          <a class="onmap" href="https://g.co/kgs/YGPMgdt" target="_blank"
+            >ON MAP</a
+          >
+        </div>
+        <div class="left-footer-bottom d-flex align-items-center">
+          <svg
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0)">
+              <path
+                d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z"
+              ></path>
+            </g>
+          </svg>
+          <div class="circle"></div>
+          <a class="number" href="tel:0800211927">0800 211 927</a>
+          <div class="circle"></div>
+          <a class="email" href="mailto:contact@forstudy.space"
+            >contact@forstudy.space</a
+          >
+        </div>
+      </div>
+      <div class="right-footer-text text-end">
+        <p>&copy; 2021 HLEGAL Law company, LLC</p>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

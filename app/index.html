@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" type="image/x-icon" href="/images/Favicon.ico" />
+    <meta property="og:title" content="Hlegal" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
@@ -17,7 +18,7 @@
     <main>
       <section class="first-section">
         <div class="header-main-section">
-          <header>
+          <header style="height: 100px">
             <a href="#"><img src="./images/Logo.svg" alt="Logo" /></a>
             <div class="right-header-container">
               <div class="right-header-container_top">
@@ -62,7 +63,7 @@
                     <li><a href="#">about us</a></li>
                     <li><a href="#">services</a></li>
                     <li><a href="#">team</a></li>
-                    <li><a href="#">publications</a></li>
+                    <li><a href="publications.html">publications</a></li>
                     <li><a href="contact.html">contact</a></li>
                   </ul>
                 </nav>
@@ -411,14 +412,14 @@
     <script>
       $(document).ready(function () {
         $(".carousel").slick({
-          infinite: true, // Бесконечная прокрутка
-          slidesToShow: 1, // Показывать 1 слайд за раз
-          slidesToScroll: 1, // Прокручивать по 1 слайду
-          adaptiveHeight: true, // Адаптация высоты слайда
-          arrows: false, // Показывать стрелки (если нужно)
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true,
+          arrows: false,
           dots: true,
-          autoplay: true, // Автоматическая прокрутка
-          autoplaySpeed: 3000, // Интервал между прокрутками (в миллисекундах)
+          autoplay: true,
+          autoplaySpeed: 3000,
           speed: 600,
         });
       });
